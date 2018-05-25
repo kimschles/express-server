@@ -1,6 +1,7 @@
 const express = require('express')
 const responses = require('../responses')
 const cors = require('cors')
+const port = (process.env.PORT || 3000)
 const app = express()
 
 const findById = (responses, id) => {
@@ -27,4 +28,4 @@ app.get('/:id', (req, res) => {
     
 })
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(port, () => console.log(`App listening on port ${port}!`))
